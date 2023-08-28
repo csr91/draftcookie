@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear y mostrar Cookie</title>
+</head>
+<body>
+    <h1>Crear y Mostrar Cookie</h1>
+    <form action="/crear_cookie" method="post">
+        <label for="cookie_valor">Valor de la Cookie:</label>
+        <input type="text" name="cookie_valor" id="cookie_valor">
+        <button type="submit">Crear Cookie</button>
+    </form>
+    
+    <h2>Cookie Actual:</h2>
+    <p>{{ cookie_valor }}</p>
+</body>
+</html>
