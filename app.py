@@ -4,7 +4,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "¡Bienvenido a mi aplicación Flask!"
+    welcome_message = """
+    ¡Bienvenido a mi aplicación Flask!<br><br>
+    Aquí tienes algunas URLs disponibles en la aplicación:<br>
+    - <a href="/crearcookie">Crear una cookie</a><br>
+    - <a href="/verificarcookie">Verificar la existencia de la cookie</a><br>
+    - <a href="/cookievalida">Cookie válida</a><br>
+    - <a href="/cookieinvalida">Cookie inválida</a><br>
+    """
+    return welcome_message
 
 @app.route('/crearcookie')
 def crear_cookie():
@@ -28,4 +36,4 @@ def cookie_invalida():
     return "Algo salió mal, no se encontró la cookie."
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)
